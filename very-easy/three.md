@@ -109,7 +109,7 @@ http://thetoppers.htb/shell.php?cmd=cat%20/var/www/flag.txt
 - **Service fingerprinting from API responses** -- `{"status": "running"}` identified LocalStack without needing nmap version detection
 - **S3 (Simple Storage Service) write access to web root = RCE** -- storage misconfiguration escalated to full remote code execution because the bucket mapped directly to the served directory
 - **PHP web shell mechanics** -- `system($_GET["cmd"])` takes a URL parameter and passes it directly to the OS; one line of PHP is enough for full command execution
-- **bash strips $ in echo** -- wrapping the content in single quotes prevents bash from interpreting $ as a variable, writing it literally
+
 - **What would have stopped this:**
   - Never expose LocalStack or dev tooling on a public-facing server
   - Enforce authentication on S3 buckets even in dev environments

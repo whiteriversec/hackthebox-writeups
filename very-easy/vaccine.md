@@ -1,7 +1,7 @@
 # Vaccine | Easy | 2026-07-07
 
 ## Summary
-Vaccine is a Linux box chaining multiple techniques across FTP, password cracking, web application SQL injection, and privilege escalation. Anonymous FTP access exposed a password-protected zip containing web app credentials. A hashed password was cracked with Hashcat to gain dashboard access. SQLMap identified a PostgreSQL injection vulnerability, which was escalated to Remote Code Execution (RCE) via --os-shell, then to a stable reverse shell. PostgreSQL credentials were harvested from the web app source files. SSH access with those credentials revealed a sudo misconfiguration on vi, which was exploited via shell escape to achieve root.
+Vaccine is a Linux box chaining multiple techniques across FTP, password cracking, web application SQL injection, and privilege escalation. Anonymous FTP access exposed a password-protected zip containing web app credentials. A hashed password was cracked with Hashcat to gain dashboard access. SQLMap identified a PostgreSQL injection vulnerability, which was escalated to Remote Code Execution (RCE) via --os-shell, then to a stable reverse shell. PostgreSQL credentials were harvested from the web app source files. SSH access with those credentials revealed a sudo misconfiguration on vi, which was exploited via shell escape to achieve root. Test
 
 ---
 
